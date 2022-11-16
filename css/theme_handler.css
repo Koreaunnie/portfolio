@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* theme_handler checkbox design */
+#toggle{
+    top: 22px;
+    width: 52px;
+    height: 27px;
+}
+
+#toggle input {
+    display: none;
+}
+#toggle label {  /* 생략 가능? */
+    display: block;
+    width: 52px;
+    height: 27px;
+}
+#toggle label::before,
+#toggle label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+#toggle label::before { /* 배경 */
+    margin-left: 40px;
+    width: 52px;
+    height: 100%;
+    background: url(../img/icon_theme_handler_dark.png) no-repeat 28px;
+    background-color: #000;
+    border-radius: 1em;
+    -webkit-transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease; /* 배경색 애니메이션*/
+}
+#toggle label::after { /* 스위치 */
+    top: 3px;
+    left: 43px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+    -webkit-transition: left 0.25s ease;
+    transition: left 0.25s ease; /* 스위치 이동 애니메이션 */
+}
+#toggle input:checked + label::before { /* 켠 상태 배경색 */
+    background: url(../img/icon_theme_handler_light.png) no-repeat 6px 5px;
+    background-color: #dedede;
+}  
+#toggle input:checked + label::after {  /* 켠 상태 스위치 위치 */
+    left: 68px;
+}  
+/* theme_handler checkbox design */
+
+
+
+
+
+
+/* 이 아래로 코드 확인 필요 */
+
+  
+
+/* CSS 미디어 특성을 이용해 사용자의 OS가 사용하는 테마를 감지 */
+body {
+    background: black;
+    color: white;
+  }
+
+/* 
+prefers-color-scheme: light는 라이트 모드인지 확인, prefers-color-scheme: dark는 다크 모드인지 확인 prefers-color-scheme: no-preference는 사용자가 선호하는 테마를 알리지 않았음을 의미하며 불리언 값으로 false를 반환 */
+@media (prefers-color-scheme: light) {    /* 미디어 쿼리를 통해 감지 */
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+
+
+
