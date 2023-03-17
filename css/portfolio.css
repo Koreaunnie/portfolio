@@ -114,7 +114,7 @@ header{font-family: 'DM Serif Text', serif; position: fixed; z-index: 99999; wid
 #gnb .gnb_wrap li a:hover{font-size: 1.7rem; color: #19499B;}
 
 
-#gnb #toggle{position: absolute; right: 110px; border: 1px solid blue}
+#gnb #toggle{position: absolute; top: 22px; right: 80px;}
 /* header */
 
 

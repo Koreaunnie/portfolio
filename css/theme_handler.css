@@ -2,8 +2,7 @@
 
 /* theme_handler checkbox design */
 #toggle{
-    top: 22px;
-    width: 52px;
+    width: 50px;
     height: 27px;
 }
 
@@ -12,8 +11,9 @@
 }
 #toggle label {  /* 생략 가능? */
     display: block;
-    width: 52px;
+    width: 50px;
     height: 27px;
+    border: red;
 }
 #toggle label::before,
 #toggle label::after {
@@ -23,10 +23,10 @@
     cursor: pointer;
 }
 #toggle label::before { /* 배경 */
-    margin-left: 40px;
     width: 52px;
     height: 100%;
     background: url(../img/icon_theme_handler_dark.png) no-repeat 28px;
+    background-size: 18px;
     background-color: #000;
     border-radius: 1em;
     -webkit-transition: background-color 0.25s ease;
@@ -34,7 +34,7 @@
 }
 #toggle label::after { /* 스위치 */
     top: 3px;
-    left: 43px;
+    left: 3px;
     width: 21px;
     height: 21px;
     border-radius: 50%;
@@ -45,10 +45,11 @@
 }
 #toggle input:checked + label::before { /* 켠 상태 배경색 */
     background: url(../img/icon_theme_handler_light.png) no-repeat 6px 5px;
+    background-size: 18px;
     background-color: #dedede;
 }  
 #toggle input:checked + label::after {  /* 켠 상태 스위치 위치 */
-    left: 68px;
+    left: 27px;
 }  
 /* theme_handler checkbox design */
 
