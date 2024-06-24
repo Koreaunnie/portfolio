@@ -27,24 +27,52 @@ main{
 
 #content{
     width: 80%;
-    height: 1000px;
+    height: 600px;
     margin: 0 auto;
     margin-top: 140px;
+}
+
+#content .category{
+    width: 100%;
+    height: 500px;
+    top: 100px;
+    position: relative;
+    border: 1px solid #c2cad1;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     position: relative;
 }
 
-#content p{
-    width: 100px;
-    height: 30px;
-    text-align: left;
+#content .category .circle{
+    position: absolute;
+    top: 7px;
+    width: 17px;
+    height: 17px;
+    border-radius: 10px;
+    border: 1px solid #c2cad1;
+    box-sizing: border-box;
+}
+
+#content .category .c1{
+    right: 9px;
+    background: #ed6a5e;
+}
+
+#content .category .c2{
+    right: 33px;
+    background: #f5bf50;
+}
+
+#content .category .c3{
+    right: 57px;
+    background: #62c554;
 }
 
 #content img{
     width: 400px;
     margin-bottom: 50px;
     position: absolute;
-    top: 80px;
-
 }
 
 #content .sticker{
@@ -55,7 +83,7 @@ main{
     line-height: 40px;
     border-radius: 30px;
     position: absolute;
-    top: 500px;
+    top: 420px;
     left: 70px;
     font-size: 30px;
     text-align: center;
@@ -65,14 +93,18 @@ main{
     height: 300px;
     width: 55%;
     position: absolute;
-    top: 160px;
-    right: 0;
+    top: 100px;
+    right: 50px;
 }
 
 #content .title{
     font-family: Noto Sans KR;
     font-size: 2.5rem;
     margin-bottom: 10px;
+}
+
+#content .title .eng{
+    font-family: 'Unna', serif; 
 }
 
 #content .sub_title{
@@ -95,6 +127,10 @@ main{
     font-weight: 600;
     font-size: 1.5rem;
     width: 30%;
+}
+
+#content #info .icon{
+    display: none;
 }
 
 #content #info .field{
@@ -168,12 +204,19 @@ main{
         position: relative;
     }
 
-    #content img{
-        width: 200px;
-        margin-bottom: 50px;
+    #content .category{
+        height: 500px;
         top: 0;
-        text-align: center;
-        position: absolute; left: 50%; transform: translateX(-50%);
+    }
+
+    #content img{
+        width: 180px;
+        margin-bottom: 0;
+        top: 5px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: e7eaec;
     }
     
     #content .sticker{
@@ -181,21 +224,21 @@ main{
     }
     
     #content #info{
-        height: 300px;
-        top: 220px;
+        top: 195px;
         left: 50%;
         transform: translateX(-50%);
         width: 80%;
     }
     
     #content .title{
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: center;
     }
     
     #content .sub_title{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         text-align: center;
+        margin: 25px 0 10px 0;
     }
     
     #content #info ul{
@@ -242,10 +285,16 @@ main{
 
     #content{
         width: 100%;
+        height: fit-content;
+    }
+
+    #content img{
+        top: 15px;
     }
 
     #content #info{
         width: 95%;
+        top: 205px;
     }
 
     #content .title{
@@ -254,21 +303,39 @@ main{
     
     #content .sub_title{
         font-size: 1.3rem;
-    }
-
-    #content #info .bold{
-        font-size: 1.3rem;
-    }
-    
-    #content #info .field{
+        margin: 20px 0 0 0;
     }
 
     #content #info ul{
         border-top: none;
+        justify-content: flex-end;
     }
-    
+
     #content #info ul:last-child{
         border-bottom: none;
     }
+
+    #content #info .bold{
+        display: none;
+    }
+    
+    #content #info .icon{
+        display: flex;
+        width: 15%;
+        position: absolute;
+        left: 0;
+    }
+
+    #content #info img{
+        width: 20px;
+        margin-top: -4px;
+    }
+
+    #content #info .field{
+        width: 85%;
+        font-size: 0.9rem;
+    }
+    
+    
 
 }
