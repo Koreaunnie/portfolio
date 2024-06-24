@@ -240,15 +240,31 @@ header{
     }
 
     #gnb #gnb_wrap{
+        z-index: 99999;
         display: none;
+        position: fixed;
         width: 200px;
         height: 1000px;
         position: absolute;
         top: 70px;
         left: -200px;
-        border: 1px solid red;
+        border: 1px solid var(--color);
         background: var(--background);
-        transition: all 0.5s;
+        transition: all 0.3s;
+    }
+
+    #gnb #gnb_wrap.open{
+        z-index: 99999;
+        display: block;
+        position: fixed;
+        width: 200px;
+        height: 1000px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        border: 1px solid var(--color);
+        background: var(--background);
+        transition: all 0.3s;
     }
 
     #gnb #gnb_wrap li{
@@ -267,6 +283,33 @@ header{
 
     #gnb #toggle{
         right: 55px;
+    }
+
+    #gnb #gnb_wrap li a{
+        font-size: 1.5rem; 
+        background: none; 
+        transition: 0.3s;
+    }
+
+    #gnb #gnb_wrap li a::after{
+        content: "";
+        position: absolute;
+        background: var(--color);
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        transition: 0.3s all cubic-bezier(0.86, 0, 0.07, 1);
+        z-index: -1;
+    }
+
+    #gnb #gnb_wrap li a:hover {
+        color: var(--background);
+    }
+
+    #gnb #gnb_wrap li a:hover::after{
+        left: 0;
+        right: 0;
     }
 
 

@@ -38,11 +38,9 @@ $(document).ready(function() {
 		
 	
 	// ham_btn open
-	$("#gnb #ham_btn").click(function(){
+	$("#ham_btn").click(function(){
 		$("#gnb_wrap").stop().toggleClass("open");
-		$('#gnb_wrap').stop().slideUp(250);
 	});
-
 
 	// 다크 모드
 	const themeHandler = document.querySelector('#theme_handler');
