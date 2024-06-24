@@ -5,32 +5,41 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-		<title>Hyunjung Lim, 임현정</title>
+		<title>임현정, Hyunjung Lim</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/fullpage.css">
-		<link rel="stylesheet" href="css/portfolio.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/theme_handler.css">
+		<link rel="shortcut icon" href="img/favicon.ico">
 
 		<script src="js/jquery-1.11.2.min.js"></script> 
-		<script src="js/fullpage.js"></script>
-		<script src="js/portfolio.js"></script>
+		<script src="js/index.js"></script>
 		<script src="js/theme_handler.js"></script>
+
+		<!-- JavaScript Libraries -->
+		<script src="lib/fullpage.js"></script>
+		<script src="lib/typed.js"></script>
  </head>
  
  <body class="themed">
+	<div class="cursor"></div>
+
 	<header>
         <nav id="gnb">
-			<div class="ham_btn">
+			<h1 id="logo"><a href="index.html"><img src="img/logo.png" alt="로고"></a></h1>
+
+			<div id="ham_btn">
 				<span></span>
 				<span></span>
 				<span></span>
 			</div>
 
-            <ul class="gnb_wrap noselect">
-                <li><a href="">About</a></li>
-                <li><a href="">Project</a></li>
-                <li><a href="">Contact</a></li>
+            <ul id="gnb_wrap" class="noselect">
+                <li><a class="cursor_hover" href="about.html">About</a></li>
+                <li class="here"><a class="cursor_hover" href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
 
 			<div id="toggle">
@@ -45,7 +54,7 @@
 		<div id="fullpage">
 			<div id="intro" class="section">
 				<article class="box_wrap">
-					<h1>Welcome! <span class="typed"></span></h1>
+					<h1>Front-end Developer<span class="typed"></span></h1>
 				</article>			
 			</div>
 
@@ -61,11 +70,8 @@
 
  <footer>
 	<div id="footer_wrap">
-		<ul>
-			<li><a href="">About</a></li>
-			<li><a href="">Project</a></li>
-			<li><a href="">Contact</a></li>
-		</ul>
+		<p>Hyunjung Lim│ hyunjung1995@gmail.com</p>
+		<p>Copyright © All Rights Reserved.</p>
 	</div>
 </footer>
 </html>

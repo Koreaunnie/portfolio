@@ -1,0 +1,272 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Unna:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Prata&family=Unna:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=DM+Serif+Text&family=Prata&family=Unna:wght@400;700&display=swap');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Prata', serif;
+font-family: 'Unna', serif;
+font-family: 'DM Serif Text', serif;
+font-family: 'Arapey', serif;
+*/
+
+
+/* 마우스 효과
+*{
+    cursor: none;
+}
+
+.cursor{
+    position: fixed;
+    z-index: 9999999;
+    border: 4px solid red;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    pointer-events: none;
+
+    transition: width 0.2s, height 0.2s;
+    transform: translate(-50%, -50%);
+}
+마우스 효과 */
+
+
+
+body{
+    font-family: 'Unna', serif; 
+    width: 100%; 
+    box-sizing: border-box;
+    position: absolute;
+}
+
+body:after{
+    content: ''; 
+    position: absolute; 
+    top: 70px; 
+    left: 70px; 
+    height: 100%; 
+    width: 1px; 
+    background: var(--color);
+}
+
+a{
+    text-decoration: none; 
+    color: var(--color);
+}
+
+::selection{
+    background: #202a25; 
+    color: #fff;
+}
+.noselect{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+/* data-theme root */ 
+:root{
+    --color: #000;
+    --background: #fff;
+}
+  
+[data-theme='dark'] {
+    --background: #000;
+    --color: #fff;
+}
+
+
+html, header, main, footer, div, a, span{
+    background: var(--background);
+    color: var(--color);
+}
+
+
+.themed {
+    background: var(--boxColor);
+    color: var(--background);
+
+  }
+/* data-theme root */ 
+
+
+
+/* header */
+header{
+    font-family: 'DM Serif Text', serif;
+    position: fixed; z-index: 100;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid var(--color);
+    background: var(--background);
+}
+
+#gnb{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+}
+
+#gnb #ham_btn{
+    display: none;
+}
+#gnb #logo{
+    display: block;
+    position: absolute;
+    left: 13px;
+    top: 10px;
+    width: 40px;
+} 
+
+#gnb #logo img{
+    width: 50px;
+    height: 50px;
+} 
+
+#gnb #gnb_wrap{
+    width: 500px; 
+    height: 70px; 
+    line-height: 70px;
+    display: flex; 
+    justify-content: space-between; 
+    margin: 0 auto; 
+    text-align: center; 
+    position: absolute; 
+    right: 160px;
+}
+
+#gnb #gnb_wrap li{
+    width: calc(100% / 3); 
+    position: relative;
+}
+
+#gnb #gnb_wrap li a{
+    font-size: 1.5rem; 
+    background: none; 
+    transition: 0.3s;
+}
+
+#gnb #gnb_wrap li a:hover{
+    font-size: 1.7rem; 
+    color: #19499B;
+}
+
+#gnb #toggle{
+    position: absolute; 
+    right: 110px; 
+    border: 1px solid blue;
+}
+
+#gnb .here{
+    background: var(--color);
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid red;
+}
+#gnb .here a{
+    font-size: 2rem;
+    color: var(--background);
+}
+/* header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+}
+
+
+
+
+
+	
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+    #gnb #logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #gnb #gnb_wrap{
+        display: none;
+        width: 200px;
+        height: 1000px;
+        position: absolute;
+        top: 70px;
+        left: -200px;
+        border: 1px solid red;
+        background: var(--background);
+        transition: all 0.5s;
+    }
+
+    #gnb #gnb_wrap li{
+        width: 100%; 
+        text-align: left;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid var(--color);
+    }
+    
+    #gnb #gnb_wrap li a{
+        font-size: 1.3rem; 
+        transition: 0;
+        padding-left: 20px;
+    }
+
+    #gnb #gnb_wrap li a:hover{
+        font-size: 1.3rem; 
+    }
+
+    #gnb #toggle{
+        right: 55px;
+    }
+
+
+
+
+
+    /* 햄버거 버튼 */
+    #gnb #ham_btn{display: block; position: absolute; left: 18px; top: 18px; width: 40px; height: 33px; cursor: pointer;} 
+
+    #gnb #ham_btn span{position: absolute; display: block; height: 3px; background: var(--color); left: 0; transform: rotate(0deg); transition: 0.25s ease-in-out;}						   
+    #gnb #ham_btn span:nth-child(1){top: 0; width: 100%;}									  
+    #gnb #ham_btn span:nth-child(2){top: 15px; width: 100%;}									  
+    #gnb #ham_btn span:nth-child(3){top: 30px; width: 100%;}			
+
+    #gnb #ham_btn:hover span:nth-child(1){width: 100%;}									  
+    #gnb #ham_btn:hover span:nth-child(2){width: 80%;}									  
+    #gnb #ham_btn:hover span:nth-child(3){width: 60%;}
+
+    #gnb #ham_btn.open span:nth-child(1){top: 18px; transform: rotate(135deg);}
+    #gnb #ham_btn.open span:nth-child(2){opacity: 0; left: -60px;}
+    #gnb #ham_btn.open span:nth-child(3){top: 18px; transform: rotate(-135deg);}
+
+
+}

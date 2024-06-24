@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Unna:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Prata&family=Unna:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=DM+Serif+Text&family=Prata&family=Unna:wght@400;700&display=swap');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Prata', serif;
+font-family: 'Unna', serif;
+font-family: 'DM Serif Text', serif;
+font-family: 'Arapey', serif;
+*/
+
+
+
+
+
+/* main */
+main{
+    margin: 0 70px; 
+    padding: 0 30px;
+}
+
+#nav_title{
+    font-size: 60px;
+    position: fixed;
+    top: 100px;
+    left: 120px;
+}
+
+#nav_sub_title{
+    font-family: Noto Sans KR;
+    font-weight: 500;
+    position: fixed;
+    top: 170px;
+    left: 140px;
+}
+
+#content{
+    width: 80%;
+    height: 690px;
+    margin: 0 auto;
+    margin-top: 140px;
+    border: 1px solid red;
+    position: relative;
+}
+
+#content img{
+    width: 400px;
+    margin-bottom: 50px;
+    position: absolute;
+    top: 90px;
+}
+
+#content p{
+    width: 100px;
+    height: 30px;
+}
+
+#content .sticker{
+    color: var(--background);
+    background: var(--color);
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 30px;
+    position: absolute;
+    top: 510px;
+    left: 70px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#content #info{
+    height: 500px;
+    width: 55%;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    border: 1px solid saddlebrown;
+}
+
+#content .title{
+    font-family: Noto Sans KR;
+    font-size: 40px;
+}
+
+#content .sub_title{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#content #info ul{
+    border-top: 3px solid var(--color);
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+}
+
+#content #info ul:last-child{
+    border-bottom: 3px solid var(--color);
+}
+
+#content #info ul li{
+}
+
+#content #info .bold{
+    font-weight: 600;
+    font-size: 30px;
+    width: 30%;
+}
+
+#content #info .field{
+    font-size: 20px;
+    text-align: left;
+    width: 70%;
+}
+
+/* main */
+
+
+
+/* footer */
+#footer_wrap{
+    width: 100%; 
+    height: 70px;
+    position: absolute;
+    bottom: 0; 
+    text-align: center;
+    border: 1px solid slateblue;
+}
+/* footer */
+
+
+
+@media screen and (max-width: 1024px){
+
+}
+
+
+
+
+
+	
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+
+}
