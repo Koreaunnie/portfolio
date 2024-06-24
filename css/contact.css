@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+body{
+    overflow: hidden;
+}
 
 /* main */
 main{
@@ -8,7 +11,7 @@ main{
 }
 
 #nav_title{
-    font-size: 60px;
+    font-size: 4rem;
     position: fixed;
     top: 100px;
     left: 120px;
@@ -23,12 +26,17 @@ main{
 }
 
 #content{
-    width: 60%;
-    height: 690px;
+    width: 80%;
+    height: 1000px;
     margin: 0 auto;
     margin-top: 140px;
-    border: 1px solid red;
     position: relative;
+}
+
+#content p{
+    width: 100px;
+    height: 30px;
+    text-align: left;
 }
 
 #content img{
@@ -36,11 +44,7 @@ main{
     margin-bottom: 50px;
     position: absolute;
     top: 80px;
-}
 
-#content p{
-    width: 100px;
-    height: 30px;
 }
 
 #content .sticker{
@@ -63,17 +67,16 @@ main{
     position: absolute;
     top: 160px;
     right: 0;
-    border: 1px solid saddlebrown;
 }
 
 #content .title{
     font-family: Noto Sans KR;
     font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 #content .sub_title{
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin: 30px 0;
     font-size: 2rem;
 }
 
@@ -88,9 +91,6 @@ main{
     border-bottom: 3px solid var(--color);
 }
 
-#content #info ul li{
-}
-
 #content #info .bold{
     font-weight: 600;
     font-size: 1.5rem;
@@ -98,11 +98,33 @@ main{
 }
 
 #content #info .field{
-    font-size: 20px;
     text-align: left;
     width: 70%;
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
+}
+
+
+/* typing 스크립트 */
+.typed{
+    position: relative;
+    display: inline-block;
+    width: 500px;
+}
+
+.typed::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 4px;
+    height: 100%;
+    background-color: var(--color);
+}
+
+.typed.active::after{
+    display: none;
 }
 
 /* main */
@@ -112,17 +134,95 @@ main{
 /* footer */
 #footer_wrap{
     width: 100%; 
-    height: 70px;
+    height: 50px;
     position: fixed;
     bottom: 0; 
     text-align: center;
-    border: 1px solid slateblue;
 }
 /* footer */
 
 
 
 @media screen and (max-width: 1024px){
+
+    #nav_title{
+        font-size: 2.5rem;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #nav_sub_title{
+        font-family: Noto Sans KR;
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #content{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 200px;
+        position: relative;
+    }
+
+    #content img{
+        width: 200px;
+        margin-bottom: 50px;
+        top: 0;
+        text-align: center;
+        position: absolute; left: 50%; transform: translateX(-50%);
+    }
+    
+    #content .sticker{
+        display: none;
+    }
+    
+    #content #info{
+        height: 300px;
+        top: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+    
+    #content .title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    #content .sub_title{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    #content #info ul{
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    #content #info .bold{
+        font-weight: 600;
+        font-size: 1.3rem;
+        width: 30%;
+    }
+    
+    #content #info .field{
+        text-align: left;
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    #content #info ul{
+        border-top: 2px solid var(--color);
+    }
+    
+    #content #info ul:last-child{
+        border-bottom: 2px solid var(--color);
+    }
+
 
 }
 
@@ -139,5 +239,36 @@ main{
 
 
 @media screen and (max-width: 767px){
+
+    #content{
+        width: 100%;
+    }
+
+    #content #info{
+        width: 95%;
+    }
+
+    #content .title{
+        font-size: 1.5rem;
+    }
+    
+    #content .sub_title{
+        font-size: 1.3rem;
+    }
+
+    #content #info .bold{
+        font-size: 1.3rem;
+    }
+    
+    #content #info .field{
+    }
+
+    #content #info ul{
+        border-top: none;
+    }
+    
+    #content #info ul:last-child{
+        border-bottom: none;
+    }
 
 }

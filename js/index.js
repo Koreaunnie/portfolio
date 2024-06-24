@@ -172,6 +172,14 @@ $(document).ready(function() {
 
 
 
+	// [contact] typing 스크립트
+	var typed = new Typed('.typed', {
+		strings: ["Designer", "Second sentence."],
+		typeSpeed: 30
+	  });
+
+
+
 
 
 });
