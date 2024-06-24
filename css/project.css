@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+
+body{
+    overflow: hidden;
+}
+
+/* main */
+main{
+    margin: 0 70px; 
+    padding: 0 30px;
+}
+
+#nav_title{
+    font-size: 60px;
+    position: fixed;
+    top: 100px;
+    left: 120px;
+}
+
+#nav_sub_title{
+    font-family: Noto Sans KR;
+    font-weight: 500;
+    position: fixed;
+    top: 170px;
+    left: 115px;
+}
+
+#content{
+    width: 80%; 
+    margin: 100px auto;
+    margin-top: 200px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+#content .category{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#content .category .title{}
+
+}
+
+#content .category li{
+    margin: 0 auto;
+}
+
+#content .category img{
+    width: 430px;
+    border: 1px solid red;
+}
+
+#content .category h3{
+    font-size: 40px;
+    margin: 25px auto;
+}
+
+.layer_pop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: grba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.layer_pop_content{
+    position: absolute;
+    width: 70%;
+    top: 20%;
+    left: 15%;
+    background: blueviolet;
+    z-index: 1;
+}
+
+.layer_pop_content .close_btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+/* 구경하기 버튼 */
+.click_btn{
+    margin: 20px auto;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 40px;
+    border: 1px solid var(--color);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.click_btn a{
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.click_btn::before{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    width: 0;
+    height: 0; 
+    left: var(xPos);
+    top: var(yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+}
+
+.click_btn:hover{
+    background: saddlebrown;
+}
+
+.click_btn a:hover{
+    color: darkblue;
+}
+
+.click_btn:hover::before{
+    width: 300px;
+    height: 300px;
+}
+/* 구경하기 버튼 */
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+}
+
+
+
+
+
+	
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+
+}

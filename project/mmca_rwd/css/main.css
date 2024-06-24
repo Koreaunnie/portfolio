@@ -1,0 +1,489 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+body{font-family: 'Noto Sans KR', sans-serif;}
+a{text-decoration:none;}
+
+
+header{background:#fff; width:100%; height:80px; position:fixed; z-index:99999; overflow:hidden;}
+header .logo_mobile{text-align:center; padding-top:0.8rem; padding-bottom:0.3rem;}
+header .logo_mobile img{width:50px;}
+header button img{width:30px;}
+
+#notice{display:none;}
+header .menu_pc{display:none;}
+header .logo_pc{display:none;}
+.pop_wrap{display:none;}
+
+
+/* [모바일] 검색 메뉴 */
+.search_menu{width:300px; height:640px; background:#000; position:fixed; top:0; 
+             z-index:99999; left:-300px;}
+.search_menu .form_search{margin-top:88px; margin-left:10%;}
+.search_menu .search_input{width:85%; height:1.5rem; border-radius:0; border: 2px solid #fff; outline:none;}
+.search_menu .search_logo{position:absolute; left:130px; top:19px; z-index:99999;}
+.search_menu .search_logo img{width:2.8rem;}
+.search_menu .search_close{position:absolute; left:15px; top:30px; z-index:99999;
+                           border:0; background:none; outline:none; cursor:pointer; }
+.search_menu .search_close img{width:1.4rem;}
+
+
+
+/* [모바일] 전체 메뉴 */
+.searching{position:absolute; top:0; left:0; margin:1.5rem 15px 0 15px;
+           background:none; color:#000; border:0; outline:none; cursor:pointer; z-index:99999;}
+.hammenu{position:absolute; top:0; right:0; margin:1.5rem 15px 0 15px;
+         background:none; color:#000; border:0; outline:none; cursor:pointer; z-index:99999;}
+.menu_logo{position:absolute; right:130px; top:19px; z-index:99999;}
+.menu_logo img{width:2.8rem;}
+.menu_close{position:absolute; right:15px; top:30px; position:fixed;
+            border:0; background:none; outline:none; cursor:pointer; z-index:99999;}
+.menu_close img{width:1.4rem;}
+   
+
+.menu{width:300px; height:640px; background:#000; position:fixed; top:0; 
+      z-index:99999; right:-300px;}
+	  
+.top_menu{display:flex; font-size:0.6em; margin:85px 15px 30px 15px;}
+.top_menu li{width:16.66%; margin-right:5px;}
+
+.menu ul li a{color:#fff;}
+.gnb>li{margin-top:10px; margin-bottom:30px; margin-left:25px; display:flex;}
+.gnb .sub{position:absolute; width:50%; background:#fff; height:520px; right:0; top:120px; display:none;}
+.gnb .sub li{height:2.5rem; margin-left:25px; margin-top:0.8em;}
+.gnb .sub li a{color:#000; display:block; line-height:2.5rem;}
+
+.menu_search{text-indent:-99999px;}
+.menu_search ul li{display:none;}
+
+#quick_menu{display:none;}
+
+
+
+/* [모바일] 슬라이드 배너 */
+#banner_wrap{position:relative; width:100%; margin:0 auto; overflow:hidden; height:530px;
+              padding-top:80px; }
+
+#slide_banner li a{display:block; text-indent:-9999px;}
+#slide_banner img{width:100%;}
+
+#slide_banner button{position:absolute; top:265px; z-index:999; width:40px; height:40px; background:none; border:none; outline:none; color:transparent;}
+#slide_banner button:before{font-family:"xeicon"; color:#000; font-size:30px; font-weight:bold;}
+#slide_banner button.slick-prev{position:absolute; left:5%; color:transparent; cursor:pointer;}
+#slide_banner button.slick-prev:before{content:"\e93d";}
+#slide_banner button.slick-next{position:absolute; right:5%; color:transparent; cursor:pointer;}
+#slide_banner button.slick-next:before{content:"\e940";}
+
+#banner_wrap .indicator_wrap{position:relative; top:400px; left:0; cursor:pointer; z-index:999;}
+#banner_wrap .indicator{text-align:center; z-index:999;}
+#banner_wrap .indicator li{display:inline-block; padding-left:4px;padding-right:4px;}
+#banner_wrap .indicator li.on a{background:#000;}
+#banner_wrap .indicator li a{display:block; background:#eee; width:15px; height:15px; border-radius:100%;}
+		
+#slide_banner_pc{display:none;}
+
+
+
+/* [모바일] 관람 시간 */
+#timetable{width:100%; height:430px; background:#000;}
+#timetable h2{color:#fff; font-size:2rem; text-align:center; padding-top:30px; padding-bottom:20px;}
+#timetable h2 span{display:block; font-size:0.6em;}
+#timetable ul{height:55px; text-align:center; line-height:55px;}
+#timetable ul li a{font-size:1.5rem; color:#fff;}
+#timetable ul li>span{padding-left:60px;}
+#timetable .booking{width:100%; height:70px; line-height:70px; background:#b60808; font-weight:bold; margin-top:20px;}
+#timetable .booking a{font-size:1.7rem;}
+
+@keyframes fadeInDown {
+  0% {
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration:0.8s;
+  animation-duration:0.8s;
+}
+
+.fadeInDown{visibility:visible;}
+
+
+/* [모바일] 온라인 미술관 */
+#online_museum{width:100%; height:20%; margin:150px auto 50px auto;}
+#online_museum h2{text-align:center;}
+#online_museum p{text-align:center; padding-top:3px;}
+#online_museum p a{color:#000; font-size:0.8em;}
+
+#online_museum ul{width:100%; margin:0 auto; display:table;}
+#online_museum ul li{width:100%; background:#000; margin-top:6%; margin-bottom:10%; position:relative;}
+#online_museum ul li a{padding-top:1rem; padding-bottom:0px; margin:0 auto;}
+#online_museum ul img{width:100%;}
+#online_museum ul li p{color:#fff; padding-bottom:1rem;}
+#online_museum ul li p:first-child{padding-top:1rem;}
+#online_museum ul li p span{display:block;}
+#online_museum ul li .title{font-weight:bold; font-size:1rem;}
+#online_museum .box p{font-size:0.9em;}
+#online_museum .btn_play{width:10%; position:absolute; top:20%; left:47%; margin:0 auto;}
+
+
+
+
+/* [모바일] 소장품 */
+#collection{width:100%; height:20%; margin:150px auto 50px auto; overflow:hidden;}
+#collection h2{text-align:center;}
+#collection>p{text-align:center; padding-top:3px;}
+#collection>p a{text-align:center; padding-top:7px; color:#000; font-size:0.8em;}
+
+#collection ul{width:100%;}
+#collection ul li{width:100%; height:450px; margin-top:6%; margin-bottom:10%; position:relative;}
+#collection ul li img{height:100%; display: block; margin: 0 auto;}
+
+#collection ul li p{color:#000; text-align:center; margin-top:22rem; font-size:0.9em;}
+#collection ul li:hover p{color:#fff;}
+#collection ul li p span{margin-top:0.3em;}
+#collection ul li p .title{font-weight:bold; font-size:1rem;}
+
+#collection li .box{width:100%; height:100%; margin-bottom:40px; position:absolute; left:0; top:0;}
+#collection li:hover .box{width:100%; height:100%; background:rgba(0,0,0,0.3); cursor:pointer;}
+#collection span{display:block;}
+
+
+
+/* [모바일] 푸터 */
+footer{width:100%; height:480px; background:#000; margin-top:130px; overflow:hidden;}
+
+#footer_menu_top{height:80px; width:100%;}
+#footer_menu_top ul{height:40px; width:100%; margin:0 auto;}
+#footer_menu_top ul li{line-height:20px; text-align:center; float:left; padding:3px 0 0 0;}
+#footer_menu_top ul li:nth-child(1){width:20%;}
+#footer_menu_top ul li:nth-child(2){width:20%;}
+#footer_menu_top ul li:nth-child(3){width:20%;}
+#footer_menu_top ul li:nth-child(4){width:20%;}
+#footer_menu_top ul li:nth-child(5){width:20%;}
+#footer_menu_top ul li:nth-child(6){width:25%;}
+#footer_menu_top ul li:nth-child(7){width:25%;}
+#footer_menu_top ul li:nth-child(8){width:25%;}
+#footer_menu_top ul li:nth-child(9){width:25%;}
+#footer_menu_top ul li:nth-child(9) a{font-size:0.7em;}
+#footer_menu_top ul li a{color:#fff; font-size:0.8em;}
+
+#footer_social_icon ul{display:flex; width:400px; margin:20px auto 0 auto;}
+#footer_social_icon ul li{width:20%; text-align:center;}
+#footer_social_icon img{width:45px;}
+
+footer h2{text-align:center; margin-top:40px; margin-bottom:40px;}
+footer h2 img{width:230px;}
+footer p{color:#fff; text-align:center; font-size:0.5em;}
+footer .description{width:90%; margin:0 auto; text-align:center; margin-top:40px; font-size:0.8rem;}
+footer .description span{display:block;}
+
+#footer_menu_bottom ul{display:flex; width:100%; margin:40px auto 10px auto;}
+#footer_menu_bottom ul li{width:20%; font-size:0.7em; text-align:center;}
+#footer_menu_bottom ul li a{color:#fff;}
+
+
+
+
+
+@media screen and (min-width:769px){
+
+/* [태블릿] 관람 시간 */
+#timetable{height:250px; position:relative; overflow:hidden;}
+#timetable ul{height:55px; line-height:34px; width:100%;}
+#timetable ul li{width:100%;}
+#timetable ul li:nth-child(1){position:absolute; left:-30%;}
+#timetable ul li:nth-child(2){position:absolute; left:30%;}
+#timetable ul li:nth-child(3){position:absolute; left:-30%; top:180px;}
+#timetable ul li:nth-child(4){position:absolute; left:30%; top:180px;}
+#timetable ul li span{padding-left:0;}
+#timetable .booking{width:140px; height:90px; line-height:40px; background:#b60808; font-weight:bold; margin-top:0px; position:absolute; top:130px; right:41.3%;}
+#timetable .booking a{font-size:1.6rem;}
+#timetable .booking span{display:block;}
+
+
+
+/* [태블릿] 온라인 미술관 */
+#online_museum{width:100%; height:10%; margin:150px auto 50px auto;}
+#online_museum ul{width:100%; overflow:hidden;}
+#online_museum ul li{width:48%; height:400px; margin-bottom:3%;}
+#online_museum ul li:nth-child(1){float:left;}
+#online_museum ul li:nth-child(2){float:right;}
+#online_museum ul li:nth-child(3){float:left;}
+#online_museum ul li:nth-child(4){float:right;}
+#online_museum ul li p{font-size:0.9em;}
+#online_museum ul li img{max-height:200px;}
+#online_museum .btn_play{width:10%; position:absolute; top:18%; left:47%; margin:0 auto;}
+
+
+
+
+
+
+/* [태블릿] 소장품 */
+#collection{height:10%; margin:150px auto 50px auto;}
+#collection ul{width:100%; overflow:hidden;}
+#collection ul li{width:48%; height:450px; margin-bottom:3%;}
+#collection ul li:nth-child(1){float:left;}
+#collection ul li:nth-child(2){float:right;}
+#collection ul li:nth-child(3){float:left;}
+#collection ul li:nth-child(4){float:right;}
+#collection ul li p{margin-top:22rem; font-size:0.9em;}
+
+#collection li .box{width:100%; height:100%; margin-bottom:40px;}
+
+
+
+
+
+/* [태블릿] 푸터 */
+footer{height:490px;}
+#footer_menu_top ul li{width:20%;}
+
+#footer_social_icon ul{margin:10px auto 0 auto;}
+
+footer h2{text-align:center; margin-top:40px; margin-bottom:40px;}
+footer p{font-size:0.8em;}
+footer .description{font-size:0.85rem;}
+footer .description span{display:block;}
+
+#footer_menu_bottom ul li{font-size:0.9em; margin-top:10px;}
+
+
+}
+
+
+
+@media screen and (min-width:1920px){
+/* [PC] 상단 공지사항 */
+#notice{display:block; width:100%; height:30px; background:#000;
+        position:fixed; z-index:999999; overflow:hidden;}
+.notice_close{display:block; color:#fff; font-size:2em; background:none; outline:none; 
+              position:absolute; top:3px; right:3px; border:0; cursor:pointer; z-index:99999;}
+#notice li{text-align:center;}   
+#notice li a{color:#fff; text-align:center; line-height:30px; font-size:0.8em;}
+#notice li.n1 {background-position:0 4px;}
+#notice li.n2 {background-position:0 -31px;}
+#notice li.n3 {background-position:0 -66px;}
+
+/* [PC] 팝업 창 */
+.pop_wrap{position:absolute; left:100px; top:100px;}
+
+
+/* [PC] 헤더 */
+header{height:200px; width:80%; position:fixed; margin-left:10%; z-index:99999; padding-top:30px;}
+
+header h1{display:block; padding-top:25px;}
+header .menu_pc{display:block;}
+header .social_icon{display:flex; width:25%; position:absolute; top:40px; left:10px;}
+header .social_icon li{width:50px;}
+header .social_icon img{width:30px;}
+
+header .top_menu_pc{position:absolute; top:40px; right:10px; display:flex;}
+header .top_menu_pc li{margin:0 10px; text-align:center;}
+header .top_menu_pc li a{font-size:0.8em; color:#000;}
+header .logo_pc{display:block; text-align:center; margin-top:60px;}
+header .logo_pc img{width:240px;}
+
+
+header .logo_mobile{display:none;}
+header button{display:none;}
+.searching{display:none;}
+.hammenu{display:none;}
+.search_logo{display:none;}
+.search_logo{display:none;}
+.search_close{display:none;}
+.menu_logo{display:none;}
+.menu_close{display:none;}
+.search_menu{display:none;}
+
+.iframe{z-index:9999999;}
+
+
+
+/* [PC] 메뉴 */
+.menu .top_menu{display:none;}
+
+.menu .gnb li a{color:#000; font-weight:bold;}
+.gnb{position:fixed; width:80%; height:45px; margin-top:230px; left:10%; background:#fff; z-index:99999;}
+.gnb>li{float:left; width:14.28%; text-align:center;
+margin-left:0; margin-right:0; margin-top:0;}
+.gnb>li>a{line-height:45px; color:#000; font-size:1.1rem; margin:0 auto;}
+.gnb li a:hover{color:#b60808;}
+.menu_search{text-indent:0px;}
+.menu_search img{width:20px; margin-top:15px;}
+
+.gnb .sub{position:absolute; background:#000; width:100%; top:45px; left:0;
+          height:45px; line-height:45px; margin-left:0;}
+.gnb .sub li{float:left; margin-top:0; margin-left:0;}
+.gnb .sub li a{display:block; color:#fff; font-size:1.1rem;}
+.gnb .sub li a:hover{color:#b60808;}
+.gnb .sub1 li{width:12.5%;}
+.gnb .sub2 li{width:12.5%;}
+.gnb .sub3 li{width:12.5%;}
+.gnb .sub3 li:first-child{margin-left:100px;}
+.gnb .sub4 li{width:12.5%;}
+.gnb .sub4 li:first-child{margin-left:570px;}
+.gnb .sub5 li{width:12.5%;}
+.gnb .sub5 li:first-child{margin-left:500px;}
+.gnb .sub6 li{width:12.5%;}
+.gnb .sub6 li:first-child{margin-left:1000px;}
+.gnb .sub7 li{width:50%; padding-left:50%;}
+.menu_search{text-indent:0px;}
+.menu_search ul li{display:block;}
+.gnb .sub7 input{width:300px; height:20px; line-height:45px;}
+.gnb .sub7 input:focus{border: 2px solid #000; outline: none;}
+
+
+
+
+/* [PC] 퀵 메뉴 */
+#quick_menu{display:block; width:70px; position:absolute; right:4%; top:300px;}
+/* #quick_menu ul{width:70px; position:absolute; right:2%; top:300px;} */
+#quick_menu ul li{margin-top:1rem; margin-bottom:1rem;}
+#quick_menu ul li img{width:70px;}
+
+
+
+
+/* [PC] 슬라이드 배너 */
+#banner_wrap{position:relative; width:80%; height:400px; top:340px; padding-top:0;}
+#slide_banner_pc{display:block;}
+#slide_banner_pc img{width:100%; height:100%;}
+
+#slide_banner_pc button{position:absolute; top:190px; z-index:999; width:40px; height:40px; background:none; border:none; outline:none; text-indent:99999;}
+#slide_banner_pc button:before{font-family:"xeicon"; color:#000; font-size:40px; font-weight:bold;}
+#slide_banner_pc button.slick-prev{position:absolute; left:3%; color:transparent; cursor:pointer;}
+#slide_banner_pc button.slick-prev:before{content:"\e93d";}
+#slide_banner_pc button.slick-next{position:absolute; right:3%; color:transparent; cursor:pointer;}
+#slide_banner_pc button.slick-next:before{content:"\e940";}
+
+#slide_banner{display:none;}
+
+
+.slick-dots {
+        top:100px;
+        left:100px;
+
+		z-index:99999;
+
+	display: flex;
+	justify-content: center;
+	
+	margin: 0;
+	padding: 1rem 0;
+	
+	list-style-type: none;
+
+}
+.slick-dots button {
+		
+			display: block;
+			width: 1rem;
+			height: 1rem;
+			padding: 0;
+			cursor:pointer;
+			border: none;
+			border-radius: 100%;
+			background:#fff;
+		}
+.slick-dots li{display:none;}
+
+
+
+
+
+
+
+/* [PC] 관람 시간 */
+#timetable{width:80%; height:100px; margin:360px auto 0 auto; position:relative;}
+#timetable h2{float:left; width:16.66%; margin-left:30px; font-size:1.5rem; padding-top:19.3px;}
+#timetable ul{width:100%; display:inline-block;}
+#timetable ul li{width:16.66%;}
+#timetable ul li:nth-child(1){position:absolute; top:15px; left:20%;}
+#timetable ul li:nth-child(2){position:absolute; top:15px; left:36%;}
+#timetable ul li:nth-child(3){position:absolute; top:15px;left:52%;}
+#timetable ul li:nth-child(4){position:absolute; top:15px;left:68%;}
+#timetable ul li span{padding-left:0; display:block;}
+#timetable ul li a{font-size:1.3rem;}
+
+#timetable .booking{width:140px; height:85px; line-height:30px; padding-top:15px; right:0; top:0;}
+#timetable .booking a{font-size:1.4rem;}
+#timetable ul li a:hover{color:#b60808;}
+#timetable .booking a:hover{color:#fff;}
+
+
+/* [PC] 온라인 미술관 */
+#online_museum{width:80%; height:400px;}
+#online_museum>p{text-align:right; margin-right:0; padding-top:0;}
+#online_museum ul{display:flex;}
+#online_museum ul li{width:25%; height:20rem; background:#fff; margin-top:1%; margin-bottom:0; position:relative;}
+#online_museum ul li:hover{background:rgba(0, 0, 0, 1);}
+#online_museum ul li:nth-child(1){margin-right:15px;}
+#online_museum ul li:nth-child(2){margin-right:15px;}
+#online_museum ul li:nth-child(3){margin-right:15px;}
+#online_museum ul li p{font-size:0.8em; color:#fff; padding:0.7em 0 0.7em 0; color:#000; text-align:center; font-size:0.9em;}
+#online_museum ul li:hover p{color:#fff;}
+#online_museum ul li p:first-child{margin-top:9.8rem;}
+
+#online_museum li .box{width:100%; height:100%; position:absolute; left:0; top:0;}
+#online_museum li:hover .box{width:100%; height:100%; background:rgba(0,0,0,0.3); position:absolute; left:0; top:0;}
+
+#online_museum .btn_play{display:block; width:2rem; position:absolute; left:47%; top:3.7rem;}
+
+
+
+
+/* [PC] 소장품 */
+#collection{width:80%; height:400px; margin:100px auto 70px auto;}
+#collection>p{text-align:right; margin-right:0; padding-top:0;}
+#collection ul{display:flex;}
+#collection ul li{width:25%; height:300px; margin-top:1%;}
+#collection ul li img{height:100%;}
+#collection ul li p{margin-top:13.5rem; font-size:0.9em;}
+#collection ul li:nth-child(1){margin-right:15px;}
+#collection ul li:nth-child(2){margin-right:15px;}
+#collection ul li:nth-child(3){margin-right:15px;}
+
+
+
+
+/* [PC] 푸터 */
+footer{height:460px;}
+#footer_menu_top{height:30px;}
+#footer_menu_top ul{width:100%}
+#footer_menu_top ul li{width:11.11%; padding-top:10px; padding-bottom:5px; padding-left:0;}
+#footer_menu_top ul li:nth-child(1){width:11.11%;}
+#footer_menu_top ul li:nth-child(2){width:11.11%;}
+#footer_menu_top ul li:nth-child(3){width:11.11%;}
+#footer_menu_top ul li:nth-child(4){width:11.11%;}
+#footer_menu_top ul li:nth-child(5){width:11.11%;}
+#footer_menu_top ul li:nth-child(6){width:11.11%;}
+#footer_menu_top ul li:nth-child(7){width:11.11%;}
+#footer_menu_top ul li:nth-child(8){width:11.11%;}
+#footer_menu_top ul li:nth-child(9){width:11.11%;}
+#footer_menu_top ul li a{font-size:1rem;}
+#footer_menu_top ul li:nth-child(9) a{font-size:1em;}
+
+#footer_social_icon{margin:50px auto 10px auto;}
+
+footer h2{text-align:center; margin-top:40px; margin-bottom:30px;}
+
+footer .description{font-size:0.85rem;}
+#footer_menu_bottom ul{display:flex; width:100%; margin:30px auto 10px auto;}
+#footer_menu_bottom ul li{font-size:1rem; margin-top:10px;}
+
+
+
+
+}

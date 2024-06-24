@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html lang="en">
+
+ <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+		<title>임현정 > Project</title>
+
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/project.css">
+		<link rel="stylesheet" type="text/css" href="css/theme_handler.css">
+		<link rel="stylesheet" type="text/css" href="css/slick.css">
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+		<link rel="shortcut icon" href="img/favicon.ico">
+
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> 
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/theme_handler.js"></script>
+		<script type="text/javascript" src="lib/slick.js"></script>
+		<script type="text/javascript" src="lib/slick.min.js"></script>
+ </head>
+ 
+ <body class="themed">
+	<div class="cursor"></div>
+
+	<header>
+        <nav id="gnb">
+			<h1 id="logo"><a href="index.html"><img src="img/logo.png" alt="로고"></a></h1>
+
+			<div id="ham_btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+            <ul id="gnb_wrap" class="noselect">
+                <li><a class="cursor_hover" href="about.html">About</a></li>
+                <li class="here"><a class="cursor_hover" href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+			<div id="toggle">
+				<input type="checkbox" name="theme_handler" id="theme_handler">
+				<label for="theme_handler"></label>
+			</div>
+        </nav>
+    </header>
+
+
+	<main>
+		<h2 id="nav_title">Project</h2>
+		<h3 id="nav_sub_title">저의 작업물을 소개합니다.</h3>
+
+		<section id="content">
+			<div class="category">
+				<h2 class="title">Web Design & Publising</h2>
+
+				<div>
+					<ul class="pop_btn" onclick="openPopup('#pop')">
+						<li><img src="img/pj_01.png" alt="아쿠아디파르마 홈페이지 썸네일" onclick="openPopup('#pop')"></li>
+						<li><h3>ACQUA DI PARMA</h3></li>
+						<li>향수 브랜드 홈페이지의 모바일 화면을 제작하였습니다.</li>			
+						<li class="click_btn"><a href="https://koreaunnie.github.io/adp_mobile/" target="_blank">구경하기</a></li>
+					</ul>
+				</div>
+
+				<div class="layer_pop" id="pop">
+					<div class="lay_pop_content">팝업창</div>
+					<a class="close_btn" href="#"  onclick="closePopup('#pop')">X</a>
+				</div>
+			
+				<div>
+					<ul>
+						<li><img src="img/pj_02.png" alt="국립현대미술관 홈페이지 썸네일"></li>
+						<li><h3>국립 현대 미술관</h3></li>
+						<li>미술관 홈페이지의 반응형 화면을 제작하였습니다.</li>
+						<li class="click_btn"><a href="https://koreaunnie.github.io/mmca_rwd/" target="_blank">구경하기</a></li>
+					</ul>	
+				</div>	
+			</div>
+
+			<div class="category">
+				<h2 class="title">Design</h2>
+			</div>
+		</section>
+	</main>
+ </body>
+
+
+ <footer>
+	<div id="footer_wrap">
+		<p>Hyunjung Lim│ hyunjung1995@gmail.com</p>
+		<p>Copyright © All Rights Reserved.</p>
+	</div>
+</footer>
+</html>

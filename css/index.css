@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+
+/* main */
+main{
+    margin: 0 70px; 
+    padding: 0 30px;
+}
+
+.typed{
+    position: relative;
+    display: inline-block;
+}
+
+.typed::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+}
+
+.typed.active::after{
+    display: none;
+}
+
+/* main */
+
+
+
+
+
+
+
+/* footer */
+#footer_wrap{width: 100%; position: absolute; bottom: 10px; text-align: center;}
+/* footer */
+
+
+
+
+@media screen and (max-width: 1024px){
+
+}
+
+
+
+
+
+	
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+
+}
