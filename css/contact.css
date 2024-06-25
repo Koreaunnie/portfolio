@@ -7,13 +7,14 @@ body{
 
 /* main */
 main{
+    margin: 0 auto;
     margin: 0 70px; 
     padding: 0 30px;
 }    
 
 #nav_title{
     font-family: "Montserrat Alternates", sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: fixed;
     top: 100px;
     left: 120px;
@@ -23,8 +24,8 @@ main{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     position: fixed;
-    top: 175px;
-    left: 170px;
+    top: 170px;
+    left: 160px;
 }
 
 #content{
@@ -42,7 +43,6 @@ main{
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    position: relative;
 }
 
 #content .category #title_wrap{
@@ -184,7 +184,7 @@ main{
     #nav_title{
         font-size: 2.5rem;
         position: absolute;
-        top: 100px;
+        top: 95px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -278,7 +278,7 @@ main{
 @media screen and (max-width: 767px){
 
     main{
-        margin: 0;
+        margin: 0 auto;
     }
 
     #nav_wrap{

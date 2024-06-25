@@ -1,7 +1,10 @@
 @charset "utf-8";
 
 
-/* main */
+.kor{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 
 /* body left line */
 body:after{
@@ -43,6 +46,10 @@ main{
 
 
 
+#intro{
+    text-align: center;
+    margin: 30px;
+}
 
 
 .box_wrap{
@@ -94,11 +101,9 @@ main{
     font-size: 2rem;
 }
 
-.box_wrap .kor{
-    font-family: 'Noto Sans KR', sans-serif;
-}
 
-.box_wrap .eng{
+
+.eng{
     
 }
 
@@ -119,6 +124,14 @@ main{
 
 @media screen and (max-width: 1024px){
 
+    main{
+        margin: 0; 
+    }
+
+    .box_wrap .field{
+        font-size: 1.5rem;
+    }
+
 }
 
 
@@ -134,5 +147,17 @@ main{
 
 
 @media screen and (max-width: 767px){
+
+    main{
+        padding: 0; 
+    }
+
+    #intro{
+        font-size: 1.5rem;
+    }
+
+    .box_wrap .field{
+        font-size: 1rem;
+    }
 
 }

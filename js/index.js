@@ -27,7 +27,7 @@ $(document).ready(function() {
 	// });
 
 
-    // header
+    // [project]
 	$('#fullpage').fullpage({
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 		autoScrolling: true,
@@ -42,6 +42,7 @@ $(document).ready(function() {
 	$("#ham_btn").click(function(){
 		$("#gnb_wrap").toggleClass("open");
 	});
+
 
 	// 다크 모드
 	const themeHandler = document.querySelector('#theme_handler');
@@ -124,21 +125,6 @@ $(document).ready(function() {
 	  });
 
 
-	//[project] 팝업
-	// 열기
-	function openPopup(obj){
-		$(".layer_pop").hide();
-		$(obj).show();
-	}
-
-	//닫기
-	function closePopup(obj){
-		$(obj).hide();
-	}
-
-
-
-
 	// scroll top
 	$(window).scroll(function(){
 		var ss = $(".scrolltop");
@@ -158,7 +144,7 @@ $(document).ready(function() {
 
 
 
-	// [project] 구경하기 버튼
+	// [project] click btn
 	const btnEl = document.querySelector(".click_btn");
 
 	btnEl.addEventListener("mouseover", (event)=>{
@@ -170,12 +156,37 @@ $(document).ready(function() {
 	});
 
 
-
 	// [contact] typing 스크립트
 	var typed = new Typed('.typed', {
 		strings: ["Designer", "Second sentence."],
 		typeSpeed: 30
 	  });
+
+
+
+
+	  function checkScreenWidth() {
+		// 현재 화면 너비를 가져옵니다.
+		var screenWidth = window.innerWidth;
+	
+		// 화면 너비가 767px 이하일 때 .section 요소들을 삭제합니다.
+		if (screenWidth <= 767) {
+			var sections = document.querySelectorAll(".section");
+			sections.forEach(function(section) {
+				section.remove();
+			});
+		}
+	}
+	
+	// 페이지 로드 시 초기 체크
+	checkScreenWidth();
+	
+	// 화면 크기 변경 시 체크
+	window.addEventListener('resize', checkScreenWidth);
+
+
+
+	
 
 
 

@@ -4,6 +4,7 @@
 
 /* main */
 main{
+    margin: 0 auto;
     margin: 0 70px; 
     padding: 0 30px;
     position: relative;
@@ -11,7 +12,7 @@ main{
 
 #nav_title{
     font-family: "Montserrat Alternates", sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: fixed;
     top: 100px;
     left: 120px;
@@ -21,8 +22,8 @@ main{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     position: fixed;
-    top: 175px;
-    left: 140px;
+    top: 170px;
+    left: 130px;
 }
 
 #content{
@@ -78,7 +79,7 @@ main{
 
 #content .category #title_wrap .title{
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding-top: 15px;
     background: #e7eaec;  
     border-radius: 10px 10px 0 0;
@@ -127,7 +128,7 @@ main{
     #nav_title{
         font-size: 2.5rem;
         position: absolute;
-        top: -100px;
+        top: -105px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -207,7 +208,7 @@ main{
 @media screen and (max-width: 767px){
 
     main{
-        margin: 0; 
+        margin: 0 auto; 
     }
 
     #nav_wrap{
