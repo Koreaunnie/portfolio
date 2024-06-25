@@ -1,11 +1,12 @@
 $(document).ready(function() {
-	// cursor 이동
-	const cursor = document.querySelector('.cursor');
 	
-	document.addEventListener('mousemove', (e) => {
-		cursor.style.left = e.pageX + 'px';
-		cursor.style.top = e.pageY + 'px';
-	});
+	// cursor 이동
+	// const cursor = document.querySelector('.cursor');
+	
+	// document.addEventListener('mousemove', (e) => {
+	// 	cursor.style.left = e.pageX + 'px';
+	//	cursor.style.top = e.pageY + 'px';
+	//});
 
 
 	// cursor가 버튼 만나면 hover
@@ -39,7 +40,7 @@ $(document).ready(function() {
 	
 	// ham_btn open
 	$("#ham_btn").click(function(){
-		$("#gnb_wrap").stop().toggleClass("open");
+		$("#gnb_wrap").toggleClass("open");
 	});
 
 	// 다크 모드
@@ -157,7 +158,7 @@ $(document).ready(function() {
 
 
 
-	// [project] 바로가기 버튼
+	// [project] 구경하기 버튼
 	const btnEl = document.querySelector(".click_btn");
 
 	btnEl.addEventListener("mouseover", (event)=>{

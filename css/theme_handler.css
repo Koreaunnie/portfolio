@@ -10,11 +10,8 @@
 #toggle input {
     display: none;
 }
-#toggle label {  /* 생략 가능? */
-    display: block;
-    width: 52px;
-    height: 27px;
-}
+
+
 #toggle label::before,
 #toggle label::after {
     content: "";

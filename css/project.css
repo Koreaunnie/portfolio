@@ -160,4 +160,13 @@ main{
 
 @media screen and (max-width: 767px){
 
+    main{
+        margin-left: 10px; 
+        margin-right: 10px;
+    }
+
+    #content{
+        width: 100%;
+    }
+
 }
