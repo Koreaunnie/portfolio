@@ -100,23 +100,26 @@ main{
 #content #info{
     width: 55%;
     position: absolute;
-    top: 100px;
+    top: 90px;
     right: 50px;
 }
 
 #content .title{
-    font-family: Noto Sans KR;
+    font-family: "Playwrite NZ", cursive;
+    font-weight: 600;
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-#content .title .eng{
-    font-family: 'Unna', serif; 
+#content .sub_title{
+    font-family: Noto Sans KR;
+    font-weight: 500;
+    margin: 25px 0;
+    font-size: 1.8rem;
 }
 
-#content .sub_title{
-    margin: 30px 0;
-    font-size: 2rem;
+#content .sub_title .eng{
+    font-family: "Poppins", sans-serif;
 }
 
 #content #info ul{
@@ -284,7 +287,7 @@ main{
     #content{
         width: 100%;
     }
-    
+
     #content .category{
         height: 480px;
     }
