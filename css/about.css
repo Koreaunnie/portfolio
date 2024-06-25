@@ -35,7 +35,7 @@ main{
 
 #nav_sub_title{
     font-family: Noto Sans KR;
-    font-weight: 600;
+    font-weight: 500;
     position: fixed;
     top: 170px;
     left: 115px;
@@ -58,7 +58,15 @@ main{
     padding-bottom: 20px;
 }
 
-#content .category .circle{
+#content .category #title_wrap{
+    position: sticky;
+    top: 70px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+#content .category #title_wrap .circle{
     position: absolute;
     top: 7px;
     width: 17px;
@@ -66,31 +74,32 @@ main{
     border-radius: 10px;
     border: 1px solid #c2cad1;
     box-sizing: border-box;
+    z-index: 1;
 }
 
-#content .category .c1{
+#content .category #title_wrap .c1{
     right: 9px;
     background: #ed6a5e;
 }
 
-#content .category .c2{
+#content .category #title_wrap .c2{
     right: 33px;
     background: #f5bf50;
 }
 
-#content .category .c3{
+#content .category #title_wrap .c3{
     right: 57px;
     background: #62c554;
 }
 
-#content .category .title{
+#content .category #title_wrap .title{
     font-size: 50px;
     padding-top: 15px;
     background: #e7eaec;  
     border-radius: 10px 10px 0 0;
 }
 
-#content .category .sub_title{
+#content .category #title_wrap .sub_title{
     font-family: Noto Sans KR;
     margin-bottom: 30px;
     padding-top: 5px;
@@ -126,33 +135,29 @@ main{
 
 
 
-/* footer */
-#footer_wrap{
-    width: 100%; 
-    height: 50px;
-    position: relative;
-    bottom: -70px; 
-    text-align: center;
-}
-/* footer */
-
-
-
-
-
 @media screen and (max-width: 1024px){
 
     #nav_title{
-        display: none;
+        font-size: 2.5rem;
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     #nav_sub_title{
-        display: none;
+        font-family: Noto Sans KR;
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #content{
-        margin: 100px auto;
         width: 100%;
+        margin: 0 auto;
+        margin-top: 200px;
+        position: relative;
     }
 
     #content .category{
@@ -193,6 +198,11 @@ main{
         margin: 10px auto;
         font-size: 1.2rem;
     }
+
+    #content .category .item li{
+        width: 50%;
+    }
+
     #content .category .item li:last-child{
         display: none;
     }
@@ -211,6 +221,10 @@ main{
 
 @media screen and (max-width: 767px){
 
+    main{
+        margin: 0 10px; 
+    }
+
     #content .category .title{
         font-size: 2rem;
     }
@@ -225,5 +239,10 @@ main{
         font-size: 1rem;
     }
 
+    #content .category .item img{
+        max-width: 100px;
+        max-height: 80px;
+        height: auto;
+    }
     
 }

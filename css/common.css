@@ -25,7 +25,7 @@ font-family: "Playwrite NG Modern", cursive;
 */
 
 
-/* 마우스 효과
+/* mouse
 *{
     cursor: none;
 }
@@ -42,7 +42,35 @@ font-family: "Playwrite NG Modern", cursive;
     transition: width 0.2s, height 0.2s;
     transform: translate(-50%, -50%);
 }
-마우스 효과 */
+mouse */
+
+
+/* data-theme root */ 
+:root{
+    --color: #000;
+    --background: #fff;
+}
+  
+[data-theme='dark'] {
+    --background: #000;
+    --color: #fff;
+}
+
+
+html, header, main, footer, div, a, span{
+    background: var(--background);
+    color: var(--color);
+}
+
+
+.themed {
+    background: var(--boxColor);
+    color: var(--background);
+
+  }
+/* data-theme root */ 
+
+
 
 
 
@@ -83,34 +111,10 @@ a{
 
 
 
-/* data-theme root */ 
-:root{
-    --color: #000;
-    --background: #fff;
-}
-  
-[data-theme='dark'] {
-    --background: #000;
-    --color: #fff;
-}
-
-
-html, header, main, footer, div, a, span{
-    background: var(--background);
-    color: var(--color);
-}
-
-
-.themed {
-    background: var(--boxColor);
-    color: var(--background);
-
-  }
-/* data-theme root */ 
 
 
 
-/* header */
+/* [header] */
 header{
     font-family: 'DM Serif Text', serif;
     position: fixed; z-index: 100;
@@ -127,9 +131,9 @@ header{
     position: relative;
 }
 
-#gnb #ham_btn{
-    display: none;
-}
+
+
+/* [header] logo */
 #gnb #logo{
     display: block;
     position: absolute;
@@ -138,10 +142,32 @@ header{
     width: 40px;
 } 
 
+
 #gnb #logo img{
     width: 50px;
     height: 50px;
 } 
+/* [header] logo */
+
+
+
+/* [header] hamburger btn */
+#gnb #ham_btn{
+    display: none;
+}
+/* [header] hamburger btn */
+
+
+
+/* [header] night mode */
+#gnb #toggle{
+    position: absolute; 
+    right: 110px; 
+    border: 1px solid blue;
+}
+/* [header] night mode */
+
+
 
 #gnb #gnb_wrap{
     width: 500px; 
@@ -184,23 +210,14 @@ header{
 }
 
 
-/* 현재 위치 */
+/* [header] current menu */
 #gnb .here{
     border-bottom: 5px solid var(--color);
 }
-/* 현재 위치 */
+/* [header] current menu */
 
 
-/* 야간모드 */
-#gnb #toggle{
-    position: absolute; 
-    right: 110px; 
-    border: 1px solid blue;
-}
-/* 야간모드 */
-
-
-/* header */
+/* [header] */
 
 
 
@@ -233,11 +250,53 @@ header{
 
 
 @media screen and (max-width: 767px){
+
+    /* body left line */
+    body:after{
+        content: ''; 
+        position: static; 
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 0;
+        background: none;
+    }
+    /* body left line */
+
+
+    /* [header] logo */
     #gnb #logo{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
+    /* [header] logo */
+
+
+    /* [header] hamburger btn */
+    #gnb #ham_btn{display: block; position: absolute; left: 18px; top: 18px; width: 40px; height: 33px; cursor: pointer;} 
+
+    #gnb #ham_btn span{position: absolute; display: block; height: 3px; background: var(--color); left: 0; transform: rotate(0deg); transition: 0.25s ease-in-out;}						   
+    #gnb #ham_btn span:nth-child(1){top: 0; width: 100%;}									  
+    #gnb #ham_btn span:nth-child(2){top: 15px; width: 100%;}									  
+    #gnb #ham_btn span:nth-child(3){top: 30px; width: 100%;}			
+
+    #gnb #ham_btn:hover span:nth-child(1){width: 100%;}									  
+    #gnb #ham_btn:hover span:nth-child(2){width: 80%;}									  
+    #gnb #ham_btn:hover span:nth-child(3){width: 60%;}
+
+    #gnb #ham_btn.open span:nth-child(1){top: 18px; transform: rotate(135deg);}
+    #gnb #ham_btn.open span:nth-child(2){opacity: 0; left: -60px;}
+    #gnb #ham_btn.open span:nth-child(3){top: 18px; transform: rotate(-135deg);}
+    /* [header] hamburger btn */
+
+
+    /* [header] night mode */
+    #gnb #toggle{
+        right: 55px;
+    }
+    /* [header] night mode */
+
 
     #gnb #gnb_wrap{
         z-index: 99999;
@@ -251,6 +310,7 @@ header{
         border: 1px solid var(--color);
         background: var(--background);
         transition: all 0.3s;
+        box-sizing: border-box;
     }
 
     #gnb #gnb_wrap.open{
@@ -263,8 +323,10 @@ header{
         top: 70px;
         left: 0;
         border: 1px solid var(--color);
+        border-left: 0;
         background: var(--background);
         transition: all 0.3s;
+        box-sizing: border-box;
     }
 
     #gnb #gnb_wrap li{
@@ -279,10 +341,6 @@ header{
         font-size: 1.3rem; 
         transition: 0;
         padding-left: 20px;
-    }
-
-    #gnb #toggle{
-        right: 55px;
     }
 
     #gnb #gnb_wrap li a{
@@ -304,7 +362,7 @@ header{
     }
 
     #gnb #gnb_wrap li a:hover {
-        color: var(--background);
+        color: var(--background)
     }
 
     #gnb #gnb_wrap li a:hover::after{
@@ -313,24 +371,23 @@ header{
     }
 
 
+    /* [header] current menu */
+    #gnb .here{
+        border-bottom: 0;
+        height: 100%;
+        background: var(--color);
+    }
+
+    #gnb .here a{
+        color: var(--background);
+    }
+    /* [header] current menu */
 
 
 
-    /* 햄버거 버튼 */
-    #gnb #ham_btn{display: block; position: absolute; left: 18px; top: 18px; width: 40px; height: 33px; cursor: pointer;} 
 
-    #gnb #ham_btn span{position: absolute; display: block; height: 3px; background: var(--color); left: 0; transform: rotate(0deg); transition: 0.25s ease-in-out;}						   
-    #gnb #ham_btn span:nth-child(1){top: 0; width: 100%;}									  
-    #gnb #ham_btn span:nth-child(2){top: 15px; width: 100%;}									  
-    #gnb #ham_btn span:nth-child(3){top: 30px; width: 100%;}			
 
-    #gnb #ham_btn:hover span:nth-child(1){width: 100%;}									  
-    #gnb #ham_btn:hover span:nth-child(2){width: 80%;}									  
-    #gnb #ham_btn:hover span:nth-child(3){width: 60%;}
-
-    #gnb #ham_btn.open span:nth-child(1){top: 18px; transform: rotate(135deg);}
-    #gnb #ham_btn.open span:nth-child(2){opacity: 0; left: -60px;}
-    #gnb #ham_btn.open span:nth-child(3){top: 18px; transform: rotate(-135deg);}
+    
 
 
 }

@@ -8,7 +8,7 @@ body{
 main{
     margin: 0 70px; 
     padding: 0 30px;
-}
+}    
 
 #nav_title{
     font-size: 4rem;
@@ -27,7 +27,6 @@ main{
 
 #content{
     width: 80%;
-    height: 600px;
     margin: 0 auto;
     margin-top: 140px;
 }
@@ -44,7 +43,15 @@ main{
     position: relative;
 }
 
-#content .category .circle{
+#content .category #title_wrap{
+    border-bottom: 1px solid #c2cad1;; 
+    padding: 15px;               
+    box-sizing: border-box;   
+    background: #e7eaec;
+    border-radius: 10px 10px 0 0;  
+}
+
+#content .category #title_wrap .circle{
     position: absolute;
     top: 7px;
     width: 17px;
@@ -54,28 +61,29 @@ main{
     box-sizing: border-box;
 }
 
-#content .category .c1{
+#content .category #title_wrap .c1{
     right: 9px;
     background: #ed6a5e;
 }
 
-#content .category .c2{
+#content .category #title_wrap .c2{
     right: 33px;
     background: #f5bf50;
 }
 
-#content .category .c3{
+#content .category #title_wrap .c3{
     right: 57px;
     background: #62c554;
 }
 
-#content img{
-    width: 400px;
-    margin-bottom: 50px;
+#content #photo img{
+    width: 320px;
     position: absolute;
+    left: 5%;
+    top: 50px;
 }
 
-#content .sticker{
+#content #photo .sticker{
     color: var(--background);
     background: var(--color);
     width: 250px;
@@ -83,14 +91,13 @@ main{
     line-height: 40px;
     border-radius: 30px;
     position: absolute;
-    top: 420px;
-    left: 70px;
+    top: 400px;
+    left: 8%;
     font-size: 30px;
     text-align: center;
 }
 
 #content #info{
-    height: 300px;
     width: 55%;
     position: absolute;
     top: 100px;
@@ -167,18 +174,6 @@ main{
 
 
 
-/* footer */
-#footer_wrap{
-    width: 100%; 
-    height: 50px;
-    position: fixed;
-    bottom: 0; 
-    text-align: center;
-}
-/* footer */
-
-
-
 @media screen and (max-width: 1024px){
 
     #nav_title{
@@ -190,7 +185,6 @@ main{
     }
     
     #nav_sub_title{
-        font-family: Noto Sans KR;
         position: absolute;
         top: 140px;
         left: 50%;
@@ -199,32 +193,33 @@ main{
 
     #content{
         width: 100%;
+        height: 500px;
         margin: 0 auto;
         margin-top: 200px;
         position: relative;
     }
 
     #content .category{
-        height: 500px;
+        height: 530px;
         top: 0;
     }
 
-    #content img{
+    #content #photo img{
         width: 180px;
         margin-bottom: 0;
-        top: 5px;
+        top: 35px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         background: e7eaec;
     }
     
-    #content .sticker{
+    #content #photo .sticker{
         display: none;
     }
     
     #content #info{
-        top: 195px;
+        top: 225px;
         left: 50%;
         transform: translateX(-50%);
         width: 80%;
@@ -238,7 +233,7 @@ main{
     #content .sub_title{
         font-size: 1.4rem;
         text-align: center;
-        margin: 25px 0 10px 0;
+        margin: 25px 0 20px 0;
     }
     
     #content #info ul{
@@ -259,11 +254,11 @@ main{
     }
 
     #content #info ul{
-        border-top: 2px solid var(--color);
+        border-top: 1px solid #c2cad1;
     }
     
     #content #info ul:last-child{
-        border-bottom: 2px solid var(--color);
+        border-bottom: 1px solid #c2cad1;
     }
 
 
@@ -273,28 +268,33 @@ main{
 
 
 
-	
-
-
-
-
-
 
 
 @media screen and (max-width: 767px){
 
-    #content{
-        width: 100%;
-        height: fit-content;
+    body{
+        overflow: auto;
     }
 
-    #content img{
-        top: 15px;
+    main{
+        margin-left: 10px; 
+        margin-right: 10px;
+    }
+
+    #content{
+        width: 100%;
+    }
+    #content .category{
+        height: 480px;
+    }
+
+    #content #photo img{
+        top: 30px;
     }
 
     #content #info{
         width: 95%;
-        top: 205px;
+        top: 220px;
     }
 
     #content .title{
@@ -307,12 +307,7 @@ main{
     }
 
     #content #info ul{
-        border-top: none;
         justify-content: flex-end;
-    }
-
-    #content #info ul:last-child{
-        border-bottom: none;
     }
 
     #content #info .bold{
@@ -323,12 +318,12 @@ main{
         display: flex;
         width: 15%;
         position: absolute;
-        left: 0;
+        left: 3%;
     }
 
     #content #info img{
         width: 20px;
-        margin-top: -4px;
+        margin-top: 10px;
     }
 
     #content #info .field{
