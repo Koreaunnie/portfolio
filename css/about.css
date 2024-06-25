@@ -207,27 +207,58 @@ main{
 @media screen and (max-width: 767px){
 
     main{
-        margin: 0 10px; 
+        margin: 0; 
+    }
+
+    #nav_wrap{
+        position: fixed;
+        width: 100%;
+        top: 70px;
+        left: 0;
+        height: 30px;
+        background: var(--color); 
+        display: flex;   
+        z-index: 2;
     }
 
     #nav_title{
-        display: none;
+        position: absolute;
+        height: 30px;
+        line-height: 30px;
+        top: 0;
+        font-size: 1rem;
+        color: var(--background);
+        font-family: "Playwrite NZ", cursive;
+        font-weight: 500;
     }
     
     #nav_sub_title{
+        position: absolute;
+        height: 30px;
+        line-height: 30px;
+        top: 0;
+        font-size: 1rem;
+        color: var(--background);
         display: none;
     }
     
     #content{
-        margin-top: 110px;
+        margin-top: 130px;
     }
-    #content .category .title{
+
+    #content .category #title_wrap{
+        position: sticky;
+        top: 100px;
+    }
+
+    #content .category #title_wrap .title{
         font-size: 1.5rem;
+        padding-top: 12px;
     }
     
-    #content .category .sub_title{
+    #content .category #title_wrap .sub_title{
         font-size: 1.1rem;
-        padding-bottom: 20px;
+        padding-bottom: 12px;
     }
 
     #content .category .item{

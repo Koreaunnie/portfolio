@@ -71,8 +71,9 @@ html, header, main, footer, div, a, span{
 /* data-theme root */ 
 
 
-
-
+*{
+    caret-color: transparent;
+}
 
 body{
     font-family: "Poppins", sans-serif;
@@ -161,7 +162,6 @@ header{
 #gnb #toggle{
     position: fixed; 
     right: 110px; 
-    border: 1px solid blue;
 }
 /* [header] night mode */
 
@@ -188,6 +188,7 @@ header{
     font-size: 1.5rem; 
     background: none; 
     transition: 0.3s;
+    display: block;
 }
 
 #gnb #gnb_wrap li a::after{
