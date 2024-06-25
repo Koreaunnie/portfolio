@@ -11,6 +11,7 @@ main{
 }    
 
 #nav_title{
+    font-family: "Montserrat Alternates", sans-serif;
     font-size: 4rem;
     position: fixed;
     top: 100px;
@@ -18,11 +19,11 @@ main{
 }
 
 #nav_sub_title{
-    font-family: Noto Sans KR;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     position: fixed;
-    top: 170px;
-    left: 140px;
+    top: 175px;
+    left: 170px;
 }
 
 #content{
@@ -44,7 +45,7 @@ main{
 }
 
 #content .category #title_wrap{
-    border-bottom: 1px solid #c2cad1;; 
+    border-bottom: 1px solid #c2cad1;
     padding: 15px;               
     box-sizing: border-box;   
     background: #e7eaec;
@@ -93,7 +94,7 @@ main{
     position: absolute;
     top: 400px;
     left: 8%;
-    font-size: 30px;
+    font-size: 23px;
     text-align: center;
 }
 
@@ -106,20 +107,20 @@ main{
 
 #content .title{
     font-family: "Playwrite NZ", cursive;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 #content .sub_title{
-    font-family: Noto Sans KR;
-    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
     margin: 25px 0;
     font-size: 1.8rem;
 }
 
 #content .sub_title .eng{
     font-family: "Poppins", sans-serif;
+    font-weight: 500;
 }
 
 #content #info ul{
@@ -134,6 +135,7 @@ main{
 }
 
 #content #info .bold{
+    font-family: 'Unna', serif;
     font-weight: 600;
     font-size: 1.5rem;
     width: 30%;
@@ -146,7 +148,6 @@ main{
 #content #info .field{
     text-align: left;
     width: 70%;
-    font-family: "Poppins", sans-serif;
     font-size: 1rem;
 }
 
@@ -284,12 +285,21 @@ main{
         margin-right: 10px;
     }
 
+    #nav_title{
+        display: none;
+    }
+    
+    #nav_sub_title{
+        display: none;
+    }
+
     #content{
         width: 100%;
+        margin-top: 110px;
     }
 
     #content .category{
-        height: 480px;
+        height: 520px;
     }
 
     #content #photo img{
@@ -307,7 +317,17 @@ main{
     
     #content .sub_title{
         font-size: 1.3rem;
-        margin: 20px 0 0 0;
+        margin: 10px 0 15px 0;
+    }
+
+    #content .sub_title .none{
+        display: none;
+    }
+
+    #content .sub_title .eng{
+        margin-top: 10px;
+        display: block;
+        font-size: 1rem;
     }
 
     #content #info ul{

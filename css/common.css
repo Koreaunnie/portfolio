@@ -75,7 +75,7 @@ html, header, main, footer, div, a, span{
 
 
 body{
-    font-family: 'Unna', serif; 
+    font-family: "Poppins", sans-serif;
     width: 100%; 
     box-sizing: border-box;
     position: absolute;

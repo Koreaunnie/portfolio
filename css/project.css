@@ -12,6 +12,7 @@ main{
 }
 
 #nav_title{
+    font-family: "Montserrat Alternates", sans-serif;
     font-size: 4rem;
     position: fixed;
     top: 100px;
@@ -19,11 +20,11 @@ main{
 }
 
 #nav_sub_title{
-    font-family: Noto Sans KR;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     position: fixed;
-    top: 170px;
-    left: 115px;
+    top: 175px;
+    left: 135px;
 }
 
 #content{
@@ -39,7 +40,9 @@ main{
     justify-content: space-evenly;
 }
 
-#content .category .title{}
+#content .category .title{
+    font-family: 'Montserrat', sans-serif;
+}
 
 }
 

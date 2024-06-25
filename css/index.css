@@ -18,6 +18,7 @@ body:after{
 main{
     margin: 0 70px; 
     padding: 0 30px;
+    font-family: "Roboto Mono", monospace;
 }
 
 .typed{
@@ -38,6 +39,67 @@ main{
 
 .typed.active::after{
     display: none;
+}
+
+
+
+
+
+.box_wrap{
+    position: relative;
+    border: 1px solid #c2cad1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;   
+    width: 60%;
+    height: 60%;
+}
+
+.box_wrap .title_wrap{
+    border-bottom: 1px solid #c2cad1;
+    padding: 15px;               
+    box-sizing: border-box;   
+    background: #e7eaec;
+    border-radius: 10px 10px 0 0;  
+}
+
+.box_wrap .title_wrap .circle{
+    position: absolute;
+    top: 7px;
+    width: 17px;
+    height: 17px;
+    border-radius: 10px;
+    border: 1px solid #c2cad1;
+    box-sizing: border-box;
+}
+
+.box_wrap .title_wrap .c1{
+    right: 9px;
+    background: #ed6a5e;
+}
+
+.box_wrap .title_wrap .c2{
+    right: 33px;
+    background: #f5bf50;
+}
+
+.box_wrap .title_wrap .c3{
+    right: 57px;
+    background: #62c554;
+}
+
+.box_wrap .field{
+    padding: 3%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.box_wrap .kor{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.box_wrap .eng{
+    
 }
 
 /* main */
