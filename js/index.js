@@ -27,14 +27,23 @@ $(document).ready(function() {
 	// });
 
 
-    // [project]
+    // [project] fullpage
 	$('#fullpage').fullpage({
-		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',	// 무료 사용 라이센스
 		autoScrolling: true,
 		verticalCentered: true,
-		scrollingSpeed: 700,   // 기본값 700
-		navigation: true,
-		navigationPosition: 'right'
+		scrollingSpeed: 700,   				// 기본값 700
+		navigation: false,
+		navigationPosition: 'right',
+		slidesNavigation: true,				// 슬라이드 섹션(가로 이동) 네비게이션
+		slidesNavPosition: 'bottom', 		// 슬라이드 섹션 네비게이션 위치
+		controlArrows: true,
+		controlArrowsHTML: [
+			'<div class="fp-arrow"></div>', 
+			'<div class="fp-arrow"></div>'
+		],
+		normalScrollElements: '#element1, .element2',
+		// responsiveWidth: 1200  			// 반응형 적용 시 특정 넓이에서 fullpage 해제
 	});
 		
 	
@@ -166,6 +175,7 @@ $(document).ready(function() {
 
 
 	  function checkScreenWidth() {
+
 		// 현재 화면 너비를 가져옵니다.
 		var screenWidth = window.innerWidth;
 	

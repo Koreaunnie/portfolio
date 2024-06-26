@@ -247,31 +247,38 @@ main{
         margin-top: 130px;
     }
 
+    #content .category{
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
     #content .category #title_wrap{
-        position: sticky;
-        top: 100px;
+        position: relative;
+        top: 0;
     }
 
     #content .category #title_wrap .title{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding-top: 12px;
     }
     
     #content .category #title_wrap .sub_title{
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding-bottom: 12px;
+        padding-top: 0;
     }
 
     #content .category .item{
         justify-content: space-around;
         font-size: 1rem;
-        height: 80px;
-        line-height: 80px;
+        height: 70px;
+        line-height: 70px;
+        top: -7px;
     }
 
     #content .category .item img{
         max-width: 100px;
-        max-height: 80px;
+        max-height: 70px;
         height: auto;
     }
 
