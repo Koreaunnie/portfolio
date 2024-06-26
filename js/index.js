@@ -27,6 +27,46 @@ $(document).ready(function() {
 	// });
 
 
+
+	
+	// ========================================================================= //
+	//  Typed Js
+	// ========================================================================= //
+
+	var typed = $(".typed");
+
+	$(function() {
+		typed.typed({
+			strings: ["Hyunjung Lim.", "a Designer.", "a Developer."],
+			// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+			stringsElement: null,
+			// typing speed
+			typeSpeed: 100,
+			// time before typing starts
+			startDelay: 500,
+			// backspacing speed
+			backSpeed: 30,
+			// time before backspacing
+			backDelay: 500,
+			// loop
+			loop: true,
+			// false = infinite
+			loopCount: 5,
+			// show cursor
+			showCursor: true,
+			// character for cursor
+			cursorChar: "|",
+			// attribute to type (null == text)
+			attr: null,
+			// either html or text
+			contentType: 'html',
+			// call when done callback function
+		});
+	});
+
+	
+
+
     // [project] fullpage
 	$('#fullpage').fullpage({
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',	// 무료 사용 라이센스

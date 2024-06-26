@@ -5,19 +5,6 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-
-/* body left line */
-body:after{
-    content: ''; 
-    position: absolute; 
-    top: 70px; 
-    left: 70px; 
-    height: 100%; 
-    width: 1px; 
-    background: var(--color);
-}
-/* body left line */
-
 main{
     margin: 0 70px; 
     padding: 0 30px;
@@ -43,14 +30,6 @@ main{
 .typed.active::after{
     display: none;
 }
-
-
-
-#intro{
-    text-align: center;
-    margin: 30px;
-}
-
 
 .box_wrap{
     position: relative;
@@ -96,16 +75,16 @@ main{
 }
 
 .box_wrap .field{
-    padding: 3%;
+    padding: 3% 5%;
     text-align: center;
     font-size: 2rem;
 }
 
-
-
-.eng{
-    
+.box_wrap .field .intro{
+    text-align: left;
+    margin-bottom: 100px;
 }
+
 
 /* main */
 
@@ -116,7 +95,13 @@ main{
 
 
 /* footer */
-#footer_wrap{width: 100%; position: absolute; bottom: 10px; text-align: center;}
+#footer_wrap{
+    width: 100%; 
+    position: absolute; 
+    bottom: 5px; 
+    text-align: center;
+    font-size: 0.8rem;;
+}
 /* footer */
 
 
@@ -128,9 +113,13 @@ main{
         margin: 0; 
     }
 
+    .box_wrap{
+        width: 70%;
+    }
+
     .box_wrap .field{
         font-size: 1.5rem;
-    }
+    }    
 
 }
 
@@ -149,11 +138,13 @@ main{
 @media screen and (max-width: 767px){
 
     main{
-        padding: 0; 
+        margin: 0;
     }
 
-    #intro{
-        font-size: 1.5rem;
+    .box_wrap{
+        width: 100%;
+        height: 500px;
+        margin-top: -50px;
     }
 
     .box_wrap .field{
