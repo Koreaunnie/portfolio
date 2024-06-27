@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
 /* font-family: 'Lexend Exa', sans-serif; */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 /* font-family: 'Noto Sans KR', sans-serif; */
 
 
@@ -26,7 +26,8 @@ header h1{font-family: 'Lexend Exa', sans-serif; font-size: 1.5rem; color: #000;
         position: absolute; top: 28px; left: 10px; cursor: pointer;}
 .hamburger{background: none; outline: none; border: 0; width: 35px;
            position: absolute; top: 28px; right: 10px; cursor: pointer;}
-
+.bold{font-weight: 500;}
+h4{font-weight: 500;}
 		   
 		   
 /* header */
@@ -53,7 +54,7 @@ input:-ms-input-placeholder {color: #000;}
 #main_contents{background:#ffb500; height: 660px;}
 #main_contents p{padding-top:80px;}
 #body_col{margin-top:40px;}
-#body_col .kor{font-weight:bold; margin-top:20px;}
+#body_col .kor{font-weight: bold; margin-top:20px;}
 #body_col .eng{font-family: 'Lexend Exa', sans-serif; font-weight:normal; margin-bottom:20px;}
 #body_col ul li{font-size:0.9em;}
 #main_contents .btn_shopnow{width:120px; margin:40px auto;}
@@ -307,10 +308,13 @@ footer .icon li{width:20%; margin-top:60px; margin-bottom:25px;}
 footer .icon li img{width:40px;}
 footer ul li{margin:30px auto; font-size:1.2rem;}
 footer ul li a{color:#000;}
-footer h2{padding-top:30px;}
+footer h2{padding-top:10px;}
 footer h2 a{font-size:30px; color:#000;}
-footer .descript{margin-top: 35px;}
+footer .descript{margin-top: 40px;}
 footer p{font-size: 14px; line-height: 22px;}
+footer .mail{margin-top: 20px;}
+
+
 
 @keyframes fadeInDown {
   0% {

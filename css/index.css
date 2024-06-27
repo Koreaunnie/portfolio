@@ -82,8 +82,73 @@ main{
 
 .box_wrap .field .intro{
     text-align: left;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
+
+.box_wrap .field .desc{
+    font-size: 1.5rem;
+}
+
+.box_wrap .field #folder_wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.box_wrap .field #folder_wrap .folder{
+    width: 33%;
+}
+
+.box_wrap .field #folder_wrap .folder .name{
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.box_wrap .field #folder_wrap .folder .tooltip{
+    visibility: hidden;
+    position: relative;
+    width: 150px;
+    background: #e7eaec;
+    font-size: 0.9rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    left: 50%; 
+    transform: translateX(-50%);
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #c2cad1;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.box_wrap .field #folder_wrap .folder .tooltip::after{
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 65px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: transparent transparent #e7eaec transparent;
+    box-sizing: border-box;
+}
+
+.box_wrap .field #folder_wrap .folder .tooltip::before{
+    content: '';
+    position: absolute;
+    display: block;
+    border-color: #c2cad1 transparent;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;    
+    left: 64px;
+    top: -10px;
+    width: 0;
+}
+
+
+.box_wrap .field #folder_wrap .folder:hover .tooltip{
+    visibility: visible;
+}
+
 
 
 /* main */
@@ -118,10 +183,51 @@ main{
         height: 50%;
     }
 
-    .box_wrap .field{
+    .box_wrap .field .intro{
         font-size: 1.5rem;
+        margin-bottom: 45px;
     }    
 
+    .box_wrap .field .desc{
+        font-size: 1.2rem;
+    }
+
+    .box_wrap .field #folder_wrap{
+        margin-top: 45px;
+    }
+
+    .box_wrap .field #folder_wrap .folder img{
+        width: 50px;
+    }
+
+    .box_wrap .field #folder_wrap .folder .name{
+        font-size: 0.9rem;
+    }
+
+    .box_wrap .field #folder_wrap .folder .tooltip{
+        font-size: 0.8rem;
+        width: 130px;
+        margin-top: 15px;
+        padding: 5px;
+    }
+
+    .box_wrap .field #folder_wrap .folder .tooltip::after{
+        top: -14px;
+        left: 56px;
+        border-width: 7px;
+    }
+    
+    .box_wrap .field #folder_wrap .folder .tooltip::before{
+        content: '';
+        position: absolute;
+        display: block;
+        border-color: #c2cad1 transparent;
+        border-style: solid;
+        border-width: 0 8px 8px 8px;    
+        top: -8px;
+        left: 55px;
+        width: 0;
+    }
 }
 
 
