@@ -262,8 +262,10 @@ main{
     
 
     #content .category .title_wrap .title{
+        position: relative;
         font-size: 1.1rem;
         padding: 10px;
+        z-index: 1;
     }
 
     #content .category .item_wrap{
@@ -281,6 +283,10 @@ main{
         font-size: 1.2rem;
         margin: 15px auto 5px auto;
         text-align: center;
+    }
+
+    #content .category .item_wrap .item .kor{
+        font-size: 0.9rem;
     }
 
 
