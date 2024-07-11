@@ -87,16 +87,26 @@ main{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 1.5rem;
-    padding: 15px;      
+    padding: 15px 0 7px 0;      
     color: #000;  
     z-index: 1;          
+}
+
+#content .category .title_wrap .sub_title{
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    margin-bottom: 15px;  
+    box-sizing: border-box;   
+    background: #e7eaec;  
+    font-weight: 500;  
+    color: #000;
 }
 
 #content .category .item_wrap{
     display: flex;
     justify-content: space-evenly;
-    padding: 40px 0;
-    margin-top: 61px;
+    padding: 50px 0;
+    margin-top: 80px;
     background: transparent;
 }
 
@@ -201,6 +211,9 @@ main{
         padding: 12px;
     }
 
+    #content .category .title_wrap .sub_title{
+        font-size: 1.1rem;
+    }
 
 
 }
@@ -268,10 +281,14 @@ main{
         z-index: 1;
     }
 
+    #content .category .title_wrap .sub_title{
+        font-size: 0.9rem;
+    }
+
     #content .category .item_wrap{
         display: block;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 70px;
     }
 
     #content .category .item_wrap .item img{
